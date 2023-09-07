@@ -19,49 +19,77 @@ public token fontFamily Inter, sans-serif
  * @bounds(x: 434, y: 118, width: 1024, height: 636)
 */
 
-div {
-    style {
-        position: relative
-        background: white
-        font-family: var(fontFamily)
-    }
-    div content {
+public component Page {
+    render div {
         style {
-            max-width: 800px
-            margin: 0px auto
+            position: relative
+            background: white
+            font-family: var(fontFamily)
         }
-        div header {
+        div content {
             style {
-                padding: 10px
-                display: flex
-                justify-content: space-between
+                max-width: 800px
+                margin: 0px auto
             }
-            div left {
-                text "Craig Condon"
-            }
-            div right {
+            div header {
                 style {
+                    padding: 10px
                     display: flex
-                    gap: 10px
+                    justify-content: space-between
                 }
-                Link {
-                    insert children {
-                        text "Home"
+                div left {
+                    text "Craig Condon"
+                }
+                div right {
+                    style {
+                        display: flex
+                        gap: 10px
+                    }
+                    Link {
+                        insert children {
+                            text "Home"
+                        }
+                    }
+                    Link {
+                        insert children {
+                            text "Contact"
+                        }
+                    }
+                    Link {
+                        insert children {
+                            text "Projects"
+                        }
                     }
                 }
-                Link {
-                    insert children {
-                        text "Contact"
-                    }
-                }
-                Link {
-                    insert children {
-                        text "Projects"
+            }
+            div body {
+                slot children {
+                    div {
+                        div
                     }
                 }
             }
         }
-        div body
     }
+}
+
+/**
+ * @bounds(x: 1760, y: 141, width: 1024, height: 768)
+*/
+
+Page contact {
+    insert children {
+    }
+    text "contact"
+}
+
+/**
+ * @bounds(x: 3066, y: 130, width: 1024, height: 768)
+*/
+
+Page projects {
+    insert children {
+    }
+    text "contact"
 }
 
