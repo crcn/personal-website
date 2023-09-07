@@ -1,0 +1,16 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "design": "yarn paperclip designer --open"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@paperclip-ui/cli": "^20.0.43",
+    "typescript": "^5.2.2"
+  }
+}

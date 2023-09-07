@@ -1,0 +1,67 @@
+
+/**
+ * @bounds(x: -31, y: 60, width: 184, height: 68)
+*/
+
+public component Link {
+    render a(href: "#") {
+        style {
+            font-family: var(fontFamily)
+        }
+        slot children {
+            text "home"
+        }
+    }
+}
+
+public token fontFamily Inter, sans-serif
+/**
+ * @bounds(x: 434, y: 118, width: 1024, height: 636)
+*/
+
+div {
+    style {
+        position: relative
+        background: white
+        font-family: var(fontFamily)
+    }
+    div content {
+        style {
+            max-width: 800px
+            margin: 0px auto
+        }
+        div header {
+            style {
+                padding: 10px
+                display: flex
+                justify-content: space-between
+            }
+            div left {
+                text "Craig Condon"
+            }
+            div right {
+                style {
+                    display: flex
+                    gap: 10px
+                }
+                Link {
+                    insert children {
+                        text "Home"
+                    }
+                }
+                Link {
+                    insert children {
+                        text "Contact"
+                    }
+                }
+                Link {
+                    insert children {
+                        text "Projects"
+                    }
+                }
+            }
+        }
+        div body
+    }
+}
+
