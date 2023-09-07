@@ -1,13 +1,12 @@
 {
   "srcDir": "src",
-  "designsDir": "src/designs",
   "compilerOptions": [
     {
-      "emit": [
-        "css",
-        "react.js:js"
-      ],
-      "outDir": "lib"
+      
+      "emit": ["css", "react.js:js", "react.d.ts:d.ts"],
+      "assetOutDir": "assets",
+      "embedAssetMaxSize": -1
     }
+    
   ]
 }
